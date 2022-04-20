@@ -1,6 +1,7 @@
 import React from 'react'
 import './LoadingSpinner.css'
 import loadingSpinnerSvg from './loading-spinner.svg'
+import { useLocale } from '../../contexts/LocaleContext'
 
 export default function LoadingSpinner() {
   return (
@@ -10,7 +11,7 @@ export default function LoadingSpinner() {
         src={loadingSpinnerSvg}
         alt="loading spinner is spinning"
       />
-      <h1 className="loading-spinner__text">Loading...</h1>
+      <h1 className="loading-spinner__text">{useLocale('Loading.First')}</h1>
     </div>
   )
 }

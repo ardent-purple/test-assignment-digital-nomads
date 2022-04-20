@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import './App.css'
 import LoadingSpinner from './components/LoadingSpinner/LoadingSpinner'
 import SomeWidget from './components/SomeWidget/SomeWidget'
+import { LocaleProvider } from './contexts/LocaleContext'
 
 function App() {
   const [widgetLoaded, setWidgetLoaded] = useState(false)
@@ -13,7 +14,9 @@ function App() {
 
   return (
     <div className="app">
-      {widgetLoaded ? <SomeWidget /> : <LoadingSpinner />}
+      <LocaleProvider>
+        {widgetLoaded ? <SomeWidget /> : <LoadingSpinner />}
+      </LocaleProvider>
     </div>
   )
 }
