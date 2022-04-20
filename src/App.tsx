@@ -1,13 +1,20 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './App.css'
 import LoadingSpinner from './components/LoadingSpinner/LoadingSpinner'
 import SomeWidget from './components/SomeWidget/SomeWidget'
 
 function App() {
-  const [isLoading, setIsLoading] = useState(!0)
+  const [widgetLoaded, setWidgetLoaded] = useState(false)
+
+  // widget loading simulation
+  useEffect(() => {
+    setTimeout(() => setWidgetLoaded(true), 3000)
+  }, [])
 
   return (
-    <div className="app">{isLoading ? <LoadingSpinner /> : <SomeWidget />}</div>
+    <div className="app">
+      {widgetLoaded ? <SomeWidget /> : <LoadingSpinner />}
+    </div>
   )
 }
 
