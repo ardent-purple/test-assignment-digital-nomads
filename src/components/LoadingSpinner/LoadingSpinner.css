@@ -1,0 +1,19 @@
+.loading-spinner {
+  text-align: center;
+  max-width: 20rem;
+}
+
+.loading-spinner__spinner-svg{
+  width: 100%;
+  object-fit: contain;
+  animation: loading-spinner__spinner-svg-animation linear 10s infinite;
+}
+
+@keyframes loading-spinner__spinner-svg-animation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg)
+  }
+}
