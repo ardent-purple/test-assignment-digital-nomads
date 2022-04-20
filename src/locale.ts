@@ -10,6 +10,6 @@ export const messages: Record<string, string> = {
   'ru.Loading.First': 'Виджет грузится',
   'ru.Loading.Second': 'Виджет ещё грузится',
   'ru.Loading.Third': 'Загрузка идёт дольше чем обычно. Пожалуйста, подождите',
-  'ru.Error.Timeout': 'Ошибка при загрузке. Пожалуйста -- обновите окно',
+  'ru.Error.Timeout': 'Ошибка при загрузке. Пожалуйста, обновите окно',
   'ru.Success.LoadingFinished': 'Виджет загружен!',
 }
